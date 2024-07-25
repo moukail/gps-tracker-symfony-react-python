@@ -14,8 +14,8 @@ class DeviceFixtures extends Fixture implements DependentFixtureInterface
     {
         $user = new Device();
         $user
-            ->setMac('04:42:1a:eb:b7:d3')
-            ->setIpAddress('82.169.95.30')
+            ->setMac('04:42:1a:eb:b7:d4')
+            ->setIpAddress('82.169.95.31')
             ->setUser(
                 $this->getReference("user1", User::class)
             )

@@ -1,0 +1,36 @@
+### GET users
+GET {{host}}/api/v1/users
+Content-Type: application/json; charset=UTF-8
+###
+
+### GET devices
+GET {{host}}/api/v1/devices/01905f48-2c1b-73f9-bfa0-4271e97adab6
+Content-Type: application/json; charset=UTF-8
+###
+
+### Create device
+POST {{host}}/api/v1/devices/01905f48-2c1b-73f9-bfa0-4271e97adab6
+content-type: application/json
+
+{
+  "mac": "68:DA:73:AB:72:22",
+  "ip": "192.168.2.32"
+}
+
+### Create Location
+POST {{host}}/api/v1/locations/01905f48-ad76-7235-b1a3-d50292b17a65
+content-type: application/json
+
+{
+  "longitude": 34.34,
+  "latitude": 34.67,
+  "altitude": 34.67
+}
+
+### GET locations
+GET {{host}}/api/v1/locations/01905f48-ad76-7235-b1a3-d50292b17a65
+Content-Type: application/json; charset=UTF-8
+###
+
+### Delete
+DELETE http://localhost:8080/api/devices/1

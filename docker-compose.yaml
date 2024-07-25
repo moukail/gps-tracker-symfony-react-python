@@ -21,3 +21,22 @@ services:
       - 'POSTGRES_USER=myuser'
       - 'POSTGRES_DB=mydatabase'
       - 'POSTGRES_PASSWORD=secret'
+
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3-management-alpine
+    hostname: "rabbit"
+    environment:
+      RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
+      RABBITMQ_DEFAULT_USER: "rabbitmq"
+      RABBITMQ_DEFAULT_PASS: "rabbitmq"
+      RABBITMQ_DEFAULT_VHOST: "projectx"
+    expose:
+      - 15672
+      - 5672
+    ports:
+      - 15672:15672
+      - 5672:5672
+      - 5552:5552
+    labels:
+      NAME: "echthaar"

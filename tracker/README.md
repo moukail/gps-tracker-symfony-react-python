@@ -1,11 +1,17 @@
 ### Virtual env
 ```bash
 sudo apt install python3-venv
-python3 -m venv env
-source ./env/bin/activate
+python3 -m venv .venv
+source ./.venv/bin/activate
 which python3
 
 deactivate
+```
+
+### pybluez
+```bash
+sudo apt-get install python3-dev
+pip install git+https://github.com/pybluez/pybluez.git
 ```
 
 ### install packages

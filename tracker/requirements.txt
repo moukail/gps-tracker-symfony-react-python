@@ -4,3 +4,4 @@ python-dotenv
 haversine
 bleak
 aio-pika
+git+https://github.com/pybluez/pybluez.git
